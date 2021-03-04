@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Paper, Typography } from '@material-ui/core'
+import { Divider, Grid, makeStyles, Paper, Typography } from '@material-ui/core'
 import React, { Fragment, useState } from 'react'
 import shortid from 'shortid';
 
@@ -74,8 +74,9 @@ export const Votacion = ({mapas, seleccionarRandom, nombreA, nombreB, modos}) =>
     return (
         <>   
             <Typography  color="initial">
-            {!terminoVotacion? (seleccionaA ? (`Bannea ${nombreA}`) : (`Bannea ${nombreB}`)) : ("Mapas a jugar : ")}
+            {!terminoVotacion? (seleccionaA ? (`Bannea ${nombreA}`) : (`Bannea ${nombreB}`)) : ("Mapas a jugar ")}
             </Typography>          
+            <Divider/>
             <Grid style={{marginTop:"10px"}} container spacing={3} >
                 {mapas.map(cadaMapa => (
                     <Fragment key={shortid.generate()}>
